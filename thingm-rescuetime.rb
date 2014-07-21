@@ -4,15 +4,18 @@ require 'blink1'
 require 'net/http'
 require 'json'
 
+# place your API_KEY definition in the file rescuetime_api_key.rb (.gitignored)
+# you can get a RescueTime API key at
+# https://www.rescuetime.com/anapi/manage
+require './rescuetime_api_key.rb'
+
 # USE A BLINK(1) STATUS LIGHT TO DISPLAY YOUR RESCUETIME PRODUCTIVITY PULSE
 # https://www.rescuetime.com
 # http://thingm.com/products/blink-1/
 
-# EXAMPLE: https://www.youtube.com/watch?v=enRp7yfvl1U
+# WORKING EXAMPLE: https://www.youtube.com/watch?v=enRp7yfvl1U
 
-# you can get a RescueTime API key at
-# https://www.rescuetime.com/anapi/manage
-API_KEY = 'INSERT_A_VALID_RESCUETIME_API_KEY_HERE'
+API_KEY = RescueTime::API_KEY
 API_ENDPOINT = 'https://www.rescuetime.com/anapi/current_productivity_pulse.json'
 
 uri = URI.parse(API_ENDPOINT)
