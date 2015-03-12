@@ -18,7 +18,7 @@ You will need to have Ruby on your system, and install the `blink1` gem - [Get i
 
 Calling the `thingm-rescuetime.rb` script will update the light a single time. To have it run continuously, use your operating system's scheduling utility (Cron, for example), or open a terminal window and use a command like this:
 
-`while true ; do ruby ~/Rails/thingm-rescuetime/rescuetime-chat-status.rb ; sleep 180 ; clear ; done`
+`while true ; do ruby ~/YOUR/PATH/TO/thingm-rescuetime/thingm-rescuetime.rb ; sleep 180 ; clear ; done`
 
 When using this method, you can type `CTRL+c` to exit the loop, or just close the terminal window when you're done.
 
